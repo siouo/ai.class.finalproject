@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="zh-TW"> 
+<html lang="zh-TW">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,12 +8,18 @@
     <style>
         /* 莫蘭迪藍綠灰色系變數設定 */
         :root {
-            --bg-light: #f2f4f3;       /* 淺灰底色 */
-            --text-dark: #3a4750;      /* 深藍灰文字 */
-            --morandi-blue: #708090;   /* 莫蘭迪藍灰 */
-            --morandi-green: #8a9a86;  /* 莫蘭迪綠灰 */
-            --morandi-dark: #4e5d6c;   /* 深莫蘭迪藍 */
-            --accent-color: #a3b19b;   /* 點綴淺綠 */
+            --bg-light: #f2f4f3;
+            /* 淺灰底色 */
+            --text-dark: #3a4750;
+            /* 深藍灰文字 */
+            --morandi-blue: #708090;
+            /* 莫蘭迪藍灰 */
+            --morandi-green: #8a9a86;
+            /* 莫蘭迪綠灰 */
+            --morandi-dark: #4e5d6c;
+            /* 深莫蘭迪藍 */
+            --accent-color: #a3b19b;
+            /* 點綴淺綠 */
         }
 
         /* 全局樣式 */
@@ -35,9 +42,10 @@
             position: fixed;
             top: 0;
             width: 100%;
-            background-color: rgba(112, 128, 144, 0.95); /* 莫蘭迪藍灰半透明 */
+            background-color: rgba(112, 128, 144, 0.95);
+            /* 莫蘭迪藍灰半透明 */
             padding: 1rem 2rem;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
             z-index: 1000;
             display: flex;
             justify-content: space-between;
@@ -153,7 +161,7 @@
             background: #fff;
             padding: 2.5rem;
             border-radius: 8px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
             border-top: 5px solid var(--morandi-blue);
         }
 
@@ -201,13 +209,26 @@
 
         /* 響應式密技：手機板縮放 */
         @media (max-width: 768px) {
-            header h1 { font-size: 1rem; }
-            nav a { margin-left: 0.8rem; font-size: 0.85rem; }
-            #home h2 { font-size: 2rem; }
-            .gan-container { flex-direction: column; }
+            header h1 {
+                font-size: 1rem;
+            }
+
+            nav a {
+                margin-left: 0.8rem;
+                font-size: 0.85rem;
+            }
+
+            #home h2 {
+                font-size: 2rem;
+            }
+
+            .gan-container {
+                flex-direction: column;
+            }
         }
     </style>
 </head>
+
 <body>
 
     <!-- 導覽列 -->
@@ -229,25 +250,31 @@
     </section>
 
     <!-- 什麼是 GAN -->
-<section id="intro">
+    <section id="intro">
         <h2 class="section-title">演算法介紹</h2>
-        
+
         <div style="width: 100%; max-width: 900px; text-align: left; margin: 0 auto; padding: 0 1.5rem;">
-            
-            <h3 style="font-size: 1.25rem; color: var(--morandi-dark); margin-top: 2rem; margin-bottom: 0.5rem; text-align: left;">一. 這演算法是甚麼?</h3>
+
+            <h3
+                style="font-size: 1.25rem; color: var(--morandi-dark); margin-top: 2rem; margin-bottom: 0.5rem; text-align: left;">
+                一. 這演算法是甚麼?</h3>
             <p style="text-align: left; margin-bottom: 1.5rem; line-height: 1.8;">
                 是一種生成式AI模型，專用於生成圖片，主要架構比較特別的地方是他是由兩種神經網路所組成。<br>
                 其中之一為生成器（Generator，這邊簡稱為G），另一方為鑑別方（Discriminator，這邊簡稱為D）。
             </p>
-            
-            <h3 style="font-size: 1.25rem; color: var(--morandi-dark); margin-top: 2rem; margin-bottom: 0.5rem; text-align: left;">二. 主要解決甚麼問題?</h3>
+
+            <h3
+                style="font-size: 1.25rem; color: var(--morandi-dark); margin-top: 2rem; margin-bottom: 0.5rem; text-align: left;">
+                二. 主要解決甚麼問題?</h3>
             <p style="text-align: left; margin-bottom: 1.5rem; line-height: 1.8;">
                 1. 參考數據不足：在數據不足的情況下，可以生成具高度參考價值的範例。<br>
                 2. 非配對影像轉換：對於沒有一對一範例的情況下，透過「轉換過去、再轉回來」的自我檢查機制，創造出有類似風格的作品，或是將某圖片中有特徵的東西轉換成另一東西，像是轉換馬為班馬，但其他東西不變。<br>
                 3. 非監督式學習：能夠在無明確標籤下學習。
             </p>
-            
-            <h3 style="font-size: 1.25rem; color: var(--morandi-dark); margin-top: 2rem; margin-bottom: 0.5rem; text-align: left;">三. 基本運作流程（被分為兩階段）：</h3>
+
+            <h3
+                style="font-size: 1.25rem; color: var(--morandi-dark); margin-top: 2rem; margin-bottom: 0.5rem; text-align: left;">
+                三. 基本運作流程（被分為兩階段）：</h3>
             <p style="text-align: left; margin-bottom: 1.5rem; line-height: 1.8;">
                 <strong>第一階段（主要訓練D）：</strong><br>
                 目標：提升警察的辨識力。<br>
@@ -258,54 +285,129 @@
                 <strong>結果：</strong>訓練完成後會單獨提取G作為最終結果。<br><br>
                 <span style="color: #666;">**** 隨機雜訊：因神經網路一定需要有輸入才會有輸出，所以這就是輸入為原始材料。</span>
             </p>
-            
-            <h3 style="font-size: 1.25rem; color: var(--morandi-dark); margin-top: 2rem; margin-bottom: 0.5rem; text-align: left;">四. 常見應用 - 被分為 5 項領域</h3>
+
+            <h3
+                style="font-size: 1.25rem; color: var(--morandi-dark); margin-top: 2rem; margin-bottom: 0.5rem; text-align: left;">
+                四. 常見應用 - 被分為 5 項領域</h3>
             <p style="text-align: left; margin-bottom: 1.5rem; line-height: 1.8;">
                 <strong>1. 電腦視覺與影像處理：</strong><br>
                 (1) 擬真影像合成 (Photorealistic Image Synthesis)：從隨機雜訊中生成很真實的人臉、動物或風景照片。<br>
                 (2) 影像轉換 (Image-to-Image Translation)：這是指將影像從一個領域轉換到另一個領域（如：白天轉黑夜、草圖轉照片），舉例普通照片轉換成莫內或梵谷的藝術風格。<br>
                 (3) 超解析度 (Super-resolution)：將低解析度的模糊影像重建為具有真實性的高解析度影像。<br>
                 (4) 影像修復 (Inpainting)：當照片中有缺失或損壞的部分，系統會自動預測並生成符合背景邏輯的內容。<br><br>
-                
+
                 <strong>2. 醫療影像（數據稀缺與隱私保護的問題）：</strong><br>
                 (1) 醫學影像合成：透過合成 MRI 或 CT 影像，GAN 可以擴充訓練數據集，幫助機器學習模型在數據不足的情況下仍能獲得良好的診斷能力。<br>
                 (2) 電子健康紀錄合成：生成去識別化的合成病例紀錄，方便在不洩露患者隱私的前提下進行醫學研究。<br>
                 (3) 疾病輔助診斷：利用 GAN 生成的組織紋理特徵來輔助青光眼的自動檢測。<br><br>
-                
+
                 <strong>3. 科學研究與模擬（加速計算密集的科學模擬任務）：</strong><br>
                 (1) 天文學：用於重建星系影像特徵，或在暗物質研究中模擬引力透鏡效應。<br>
                 (2) 氣候與流體力學：物理知覺 GAN (Physics-Informed GAN) 將物理約束整合進框架，能有效模擬流體流動、氣候動態及結構力學。<br><br>
-                
+
                 <strong>4. 媒體、娛樂與倫理挑戰：</strong><br>
                 (1) Deepfake：高度還原目標人物的臉部表情、語音與動作，產生極其逼真但完全虛構的影片。用於影視特效與過世歷史人物重現外。<br>
                 (2) 創意藝術：GAN 被藝術家用來創作原創繪畫、音樂甚至詩歌。<br><br>
-                
+
                 <strong>5. 工業與自動化系統：</strong><br>
                 (1) 自動駕駛與機器人：透過合成複雜的交通場景與物件偵測數據，GAN 協助系統在虛擬環境中進行訓練。<br>
                 (2) 无线通訊：用於生成逼真的射頻（RF）訊號與通道條件，協助 5G/6G 通訊系統的測試。
             </p>
-            
+
         </div>
     </section>
 
     <!-- 核心架構 -->
+    <section id="table-section" style="padding: 4rem 2rem; background-color: #f2f4f3;">
+
+        <div style="width: 100%; max-width: 1100px; margin: 0 auto; overflow-x: auto;">
+
+            <table
+                style="width: 100%; border-collapse: collapse; background-color: #ffffff; box-shadow: 0 4px 12px rgba(0,0,0,0.05); font-size: 1rem; line-height: 1.6; text-align: left;">
+                <thead>
+                    <tr style="background-color: #4e5d6c; color: #ffffff;">
+                        <th
+                            style="padding: 1.2rem 1rem; width: 25%; font-weight: 600; border: 1px solid #3a4750; text-align: center;">
+                            我問的問題</th>
+                        <th
+                            style="padding: 1.2rem 1rem; width: 50%; font-weight: 600; border: 1px solid #3a4750; text-align: center;">
+                            其回答的重點</th>
+                        <th
+                            style="padding: 1.2rem 1rem; width: 25%; font-weight: 600; border: 1px solid #3a4750; text-align: center;">
+                            回答如何幫助我理解</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr style="background-color: #ffffff;">
+                        <td
+                            style="padding: 1.2rem 1rem; border: 1px solid #d1dcd1; vertical-align: top; font-weight: bold; color: #3a4750;">
+                            我想要更了解關於基本運作原理的部分 用簡單易懂的方式陳述給我
+                        </td>
+                        <td
+                            style="padding: 1.2rem 1rem; border: 1px solid #d1dcd1; vertical-align: top; color: #4a4a4a;">
+                            <img src="picture/1.png" alt="" style="max-width: 100%; height: auto; border-radius: 4px;">
+                        </td>
+                        <td
+                            style="padding: 1.2rem 1rem; border: 1px solid #d1dcd1; vertical-align: top; color: #555555;">
+                            利用簡單生活化的例子向我說明兩個神經網路扮演的腳色跟要做的事情
+                        </td>
+                    </tr>
+
+                    <tr style="background-color: #f8faf8;">
+                        <td
+                            style="padding: 1.2rem 1rem; border: 1px solid #d1dcd1; vertical-align: top; font-weight: bold; color: #3a4750;">
+                            我想知道有關非配對影像轉換更簡單的說法
+                        </td>
+                        <td
+                            style="padding: 1.2rem 1rem; border: 1px solid #d1dcd1; vertical-align: top; color: #4a4a4a;">
+                            <img src="picture/2.png" alt="" style="max-width: 100%; height: auto; border-radius: 4px;">
+                        </td>
+                        <td
+                            style="padding: 1.2rem 1rem; border: 1px solid #d1dcd1; vertical-align: top; color: #555555;">
+                            先解釋了甚麼是非配對和配對的名詞定義，和循環一致性的重要觀念，並用實例舉例說明
+                        </td>
+                    </tr>
+
+                    <tr style="background-color: #ffffff;">
+                        <td
+                            style="padding: 1.2rem 1rem; border: 1px solid #d1dcd1; vertical-align: top; font-weight: bold; color: #3a4750;">
+                            填入你的問題文字...
+                        </td>
+                        <td
+                            style="padding: 1.2rem 1rem; border: 1px solid #d1dcd1; vertical-align: top; color: #4a4a4a;">
+                            填入AI回答的重點內容...
+                        </td>
+                        <td
+                            style="padding: 1.2rem 1rem; border: 1px solid #d1dcd1; vertical-align: top; color: #555555;">
+                            填入這如何幫助你理解...
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </div>
+    </section>
+
+
+
+    <!-- 核心架構 
     <section id="core">
-        <h2 class="section-title">GAN 的兩大核心組件</h2>
+        <h2 class="section-title">AI輔助學習紀錄</h2>
         <div class="gan-container">
-            <!-- 產生器 -->
+             產生器 
             <div class="card">
                 <h3>1. 生成器 (Generator)</h3>
                 <p><strong>任務：無中生有。</strong></p>
                 <p>負責接收隨機的雜訊，並嘗試將其轉換為看起來像真實樣本的資料。它的終極目標是欺騙判別器，讓判別器無法分辨真偽。</p>
             </div>
-            <!-- 判別器 -->
+             判別器 -
             <div class="card discriminator">
                 <h3>2. 判別器 (Discriminator)</h3>
                 <p><strong>任務：明察秋毫。</strong></p>
                 <p>負責接收資料（混合了真正的資料與生成器做出來的假資料），並給出一個機率值，判斷該資料「是真是假」。它的終極目標是抓出所有冒牌貨。</p>
             </div>
         </div>
-    </section>
+    </section>-->
 
     <!-- 常見應用 -->
     <section id="apps">
@@ -332,4 +434,5 @@
     </footer>
 
 </body>
+
 </html>
