@@ -231,18 +231,17 @@
 
 <body>
 
-    <!-- 導覽列 -->
     <header>
         <h1>GAN 課堂作業</h1>
         <nav>
             <a href="#home">首頁</a>
             <a href="#intro">演算法介紹</a>
             <a href="#core">AI輔助學習紀錄</a>
-            <a href="#apps">查證與修正</a>
+            <a href="#test">查證與修正</a>
+            <a href="#visual">視覺化說明</a>
         </nav>
     </header>
 
-    <!-- 主視覺區 -->
     <section id="home">
         <h2>Generative Adversarial Networks</h2>
         <p>當「產生器」遇上「判別器」：AI 的左右腦互搏術</p>
@@ -250,7 +249,6 @@
         <a href="#intro" class="btn">開始探索</a>
     </section>
 
-    <!-- 什麼是 GAN -->
     <section id="intro">
         <h2 class="section-title">演算法介紹</h2>
 
@@ -318,7 +316,6 @@
         </div>
     </section>
 
-    <!-- 核心架構 -->
     <section id="core" style="padding: 4rem 2rem; background-color: #f2f4f3;">
         <h2 class="section-title">AI輔助學習紀錄</h2>
 
@@ -420,26 +417,72 @@
         </div>
     </section>
 
+    <section id="test">
+        <h2 class="section-title">查證與修正</h2>
+
+        <div style="width: 100%; max-width: 900px; text-align: left; margin: 0 auto; padding: 0 1.5rem;">
+
+            <h3
+                style="font-size: 1.25rem; color: var(--morandi-dark); margin-top: 2rem; margin-bottom: 0.5rem; text-align: left;">
+                查證重點：非配對影像轉換的相關概念是否與其描述屬實</h3>
+            <p style="text-align: left; margin-bottom: 1.5rem; line-height: 1.8;">
+                <h3>查證說明：<br> </h3>
+                具體內容並無大區別，但是補充了很多相關全新內容，主要是增加了CUT的全新概念提供了更有效率的替代方案。
+
+                <h3>修正/補充前後對比：<br> </h3>
+                <div class="gan-container">
+                <div class="card discriminator">
+                    <h3>修正說明前</h3>
+                    <p>核心機制：解決非配對影像的風格/物件轉換</p>
+                    <p>約束機制：循環一致性 (Cycle Consistency)，必須能轉回原圖</p>
+                    <p>資源消耗：較高（需兩套生成器與辨別器）</p>
+                    <p>代表模型：CycleGAN</p>
+                    <p>應用範例：馬與斑馬、季節轉換、藝術風格</p>
+                </div>
+                <div class="card discriminator">
+                    <h3>補充說明後</h3>
+                    <p>核心機制：強調保留「結構」與改變「外觀」的平衡</p>
+                    <p>約束機制：對比學習 (Contrastive Learning)，確保相同位置的特徵相似</p>
+                    <p>資源消耗：較低（僅需單向轉換，節省時間與空間）</p>
+                    <p>代表模型：CUT、Pix2pix (配對型先河)</p>
+                    <p>應用範例：鞋子線稿轉照片</p>
+                </div>
+        </div>
+            <br><br>
+                <h3>資料來源：<br> </h3>
+                aws：https://aws.amazon.com/tw/what-is/gan/<br>
+                趨近智：https://apxml.com/zh/courses/synthetic-data-gans-diffusion/chapter-2-advanced-gan-architectures-techniques/cyclegan-unpaired-translation<br>
+                巴哈姆特：https://home.gamer.com.tw/artwork.php?sn=5535118<br>
+    </section>
+
+    <section id="visual">
+        <h2 class="section-title">視覺化說明</h2>
+
+        <div style="width: 100%; max-width: 900px; text-align: left; margin: 0 auto; padding: 0 1.5rem;">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 850" width="100%" height="100%">
+            <rect width="900" height="850" fill="#F4F6F5" rx="16"/>
+
+          
+        </div>
+    </section>
 
 
-    <!-- 核心架構 
-    <section id="core">
-        <h2 class="section-title">AI輔助學習紀錄</h2>
+<!--
+     <section id="test">
+        <h2 class="section-title">查證與修正</h2>
         <div class="gan-container">
-             產生器 
-            <div class="card">
-                <h3>1. 生成器 (Generator)</h3>
-                <p><strong>任務：無中生有。</strong></p>
-                <p>負責接收隨機的雜訊，並嘗試將其轉換為看起來像真實樣本的資料。它的終極目標是欺騙判別器，讓判別器無法分辨真偽。</p>
-            </div>
-             判別器 -
+             <h3>查證重點：非配對影像轉換的相關概念是否與其描述屬實</h3>
+             <p><strong>相關連結：</strong></p>
+             <p><strong></strong>aws：https://aws.amazon.com/tw/what-is/gan/</strong></p>
+             判別器 
             <div class="card discriminator">
                 <h3>2. 判別器 (Discriminator)</h3>
                 <p><strong>任務：明察秋毫。</strong></p>
                 <p>負責接收資料（混合了真正的資料與生成器做出來的假資料），並給出一個機率值，判斷該資料「是真是假」。它的終極目標是抓出所有冒牌貨。</p>
             </div>
         </div>
-    </section>-->
+    </section>
+    -->
 
     <!-- 常見應用 -->
     <section id="apps">
